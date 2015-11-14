@@ -43,7 +43,7 @@ final class Echonest
 
         $http = new Client();
         $http->setUri(self::$source . $api . '/' . $command);
-        $http->setOptions(array('sslverifypeer' => false));
+        $http->setOptions(array('sslverifypeer' => false, 'timeout' => 120));
         $http->setMethod('GET');
 
         $format = 'json';
